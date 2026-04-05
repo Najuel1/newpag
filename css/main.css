@@ -1,0 +1,25 @@
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+}
+
+.social-icons a {
+    font-size: 1.25rem;
+}
+
+[data-bs-theme="dark"] {
+    --bs-body-bg: #2a353f;
+    --bs-body-color: #ffffff; 
+    --bs-tertiary-bg: #1d2a35;
+}
+
+[data-bs-theme="light"] {
+    --bs-body-bg: #ffffff;
+}
