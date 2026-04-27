@@ -2,13 +2,63 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora</title>
+    <title>Página de Registro</title>
+    <link rel="shortcut icon" href="assets/icon2.png" />
+    <link rel="stylesheet" href="css/mainform.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body>
-    <a href="main.html">Volver atrás</a>
-    <h1>Calculadora</h1>
-    <a href="index.html">Hacer otro cálculo</a>
-    <script src="app.js"></script>
+  <body id="particles-js">
+    <form>
+      <h1 class="title">REGISTRO</h1>
+      <label>
+        <i class="fa-solid fa-drivers-license"></i>
+        <input placeholder="Ingrese su DNI" type="text" name="dni" id="dni" />
+      </label>
+      <label>
+        <i class="fa-solid fa-user"></i>
+        <input
+          placeholder="Ingrese su nombre"
+          type="text"
+          name="nombre"
+          id="nombre"
+        />
+      </label>
+      <label>
+        <i class="fa-solid fa-user"></i>
+        <input
+          placeholder="Ingrese su Apellido"
+          type="text"
+          name="apellido"
+          id="apellido"
+        />
+      </label>
+      <label>
+        <i class="fa-solid fa-inbox"></i>
+        <input
+          placeholder="Ingrese su Correo"
+          type="email"
+          name="correo"
+          id="correo"
+        />
+      </label>
+      <input
+        class="button"
+        type="submit"
+        onclick="validate()"
+        value="¡Registrame!"
+      />
+      <a href="main.html" class="link">¡Volver a Main!</a>
+    </form>
+    <script src="regjs/regform.js"></script>
+    <script src="regjs/particles.js"></script>
+    <script src="regjs/app.js"></script>
   </body>
 </html>
