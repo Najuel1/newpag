@@ -14,49 +14,52 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body id="particles-js">
-    <form>
-      <h1 class="title">REGISTRO</h1>
-      <label>
-        <i class="fa-solid fa-drivers-license"></i>
-        <input placeholder="Ingrese su DNI" type="text" name="dni" id="dni" />
-      </label>
-      <label>
-        <i class="fa-solid fa-user"></i>
-        <input
-          placeholder="Ingrese su nombre"
-          type="text"
-          name="nombre"
-          id="nombre"
-        />
-      </label>
-      <label>
-        <i class="fa-solid fa-user"></i>
-        <input
-          placeholder="Ingrese su Apellido"
-          type="text"
-          name="apellido"
-          id="apellido"
-        />
-      </label>
-      <label>
-        <i class="fa-solid fa-inbox"></i>
-        <input
-          placeholder="Ingrese su Correo"
-          type="email"
-          name="correo"
-          id="correo"
-        />
-      </label>
-      <input
-        class="button"
-        type="submit"
-        onclick="validate()"
-        value="¡Registrame!"
-      />
-      <a href="main.html" class="link">¡Volver a Main!</a>
-    </form>
+  <body>
+    <div id="particles-js"></div>
+    <div class="container">
+      <form id="formulario">
+        <h1 class="title">REGISTRO</h1>
+        <label>
+          <i class="fa-solid fa-drivers-license"></i>
+          <input placeholder="Ingrese su DNI" type="text" name="dni" id="dni" />
+        </label>
+        <label>
+          <i class="fa-solid fa-user"></i>
+          <input placeholder="Ingrese su nombre" type="text" id="nombre" />
+        </label>
+        <label>
+          <i class="fa-solid fa-user"></i>
+          <input placeholder="Ingrese su Apellido" type="text" id="apellido" />
+        </label>
+        <label>
+          <i class="fa-solid fa-inbox"></i>
+          <input placeholder="Ingrese su Correo" type="email" id="correo" />
+        </label>
+        <input class="button" type="submit" value="¡Registrame!" />
+        <a href="main.html" class="link">¡Volver a Main!</a>
+      </form>
+    </div>
+    <div class="container container-tabla">
+      <table id="tablaregistro">
+        <thead>
+          <tr>
+            <th>DNI</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="regjs/regform.js"></script>
     <script src="regjs/particles.js"></script>
     <script src="regjs/app.js"></script>

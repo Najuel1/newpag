@@ -2,64 +2,78 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url(../assets/background.png) no-repeat center top;
-    background-size: cover;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
     min-height: 100vh;
+    padding: 50px 20px;
+    background: url(../assets/background.png) no-repeat center top fixed;
+    background-size: cover;
 }
 
-#particles-js{
-    position: relative;
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 40px;
 }
 
 form {
     display: flex;
     flex-direction: column;
     background: #fff;
-    text-align: center;
     padding: 60px 25px;
-    box-shadow: 0 5px 10px rgba(71, 3, 6, 0.7);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     border-radius: 10%;
-    position: absolute;
 }
 
 form .title {
     color: #252525;
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 800;
-    margin-top: -10px;
     margin-bottom: 25px;
+    margin-top: -30px;
+    text-align: center; 
 }
 
 form label {
-    margin-bottom: 30px;
+    display: flex; 
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: solid 1px #1d70ce;
+    padding-bottom: 5px;
 }
 
 form label .fa-solid {
-    font-size: 20px;
+    font-size: 18px;
     color: #003686;
-    margin-right: 8px;
+    margin-right: 12px;
+    width: 25px;
+    text-align: center;
 }
 
 form label input {
     outline: none;
     border: none;
     color: #252525;
-    border-bottom: solid 1px #00285c;
-    padding: 0 5px;
+    width: 100%;
     font-size: 15px;
-}
-
-form label input::placeholder {
-    color: rgba(27, 27, 27, 0.514);
+    background: transparent;
 }
 
 form .button {
@@ -68,11 +82,12 @@ form .button {
     background: linear-gradient(120deg, #e100ff9f, #8400ff, #00aeb4, #1d38ce);
     background-size: 300% 100%;
     background-position: 100% 0;
-    padding: 8px;
+    padding: 10px;
     border-radius: 25px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
+    margin-top: 5px;
     transition: background-position 0.5s;
 }
 
@@ -80,14 +95,58 @@ form .button:hover {
     background-position: 0 0;
 }
 
+/* CENTRADO DEL LINK */
 form .link {
     color: #000;
     margin-top: 20px;
-    margin-bottom: -10px;
+    margin-bottom: -20px;
     text-decoration: none;
+    text-align: center; 
 }
 
 form .link:hover {
-    color: #09ff00;
+    color: #003686;
     text-decoration: underline;
 }
+
+.container-tabla {
+    max-width: 900px; 
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); 
+    border-radius: 15px;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    color: white;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn-eliminar{
+    background:#ff4b2b; 
+    color:white; 
+    border:none; 
+    padding:5px 10px; 
+    border-radius:5px; 
+    cursor:pointer;
+}
+
+.btn-editar{
+    background:#00aeb4; 
+    color:white; 
+    border:none; 
+    padding:5px 10px; 
+    border-radius:5px; 
+    cursor:pointer; 
+    margin-right:5px;
+}
+
+.btn-edit:hover { background: #008c91 !important; }
+.btn-delete:hover { background: #d43f21 !important; }
